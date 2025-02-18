@@ -1,17 +1,20 @@
 'use client';
-
+// Importing necessary libraries
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+// Main Navbar component you're working on
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
+  // Function to toggle the mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveDropdown(null);
   };
 
+  //SImple functions to toggle the dropdowns
   const toggleDropdown = (dropdown) => {
     if (activeDropdown === dropdown) {
       setActiveDropdown(null);
